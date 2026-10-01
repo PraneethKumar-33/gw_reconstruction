@@ -1,0 +1,7 @@
+﻿data/
+results/checkpoints/
+__pycache__/
+*.pyc
+*.npy
+*.hdf5
+*.pt
