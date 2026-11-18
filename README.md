@@ -88,10 +88,10 @@ To prevent arbitrary heuristic selection, we conducted a **16-trial systematic h
 * **Depth & LR**: 4 layers at $\eta = 2\times 10^{-3}$ reached **78.76% overlap**; scaling to 6 layers caused slight overfitting (**72.08%**).
 
 ### 3. Source-Agnostic DAE (Masked Signal Corruption Sweep)
-* **Temporal Masking Ratio ($r_{\text{mask}}$)**: Tested $r_{\text{mask}} \in \{5\%, 10\%, 20\%, 30\%\}$.
-  * $r_{\text{mask}} = 5\%$: **86.10% overlap** (MSE: 0.00904 — highest accuracy).
-  * $r_{\text{mask}} = 10\%$: **85.54% overlap**.
-  * $r_{\text{mask}} = 30\%$: **84.45% overlap** (still remarkably stable despite 30% random signal dropout).
+* **Temporal Masking Ratio ($r_{\text{mask}}$)**: Tested $r_{\text{mask}} \in \{0.05, 0.10, 0.20, 0.30\}$ (5% to 30% random signal dropout).
+  * $r_{\text{mask}} = 0.05$ (5%): **86.10% overlap** (MSE: 0.00904 — highest accuracy).
+  * $r_{\text{mask}} = 0.10$ (10%): **85.54% overlap**.
+  * $r_{\text{mask}} = 0.30$ (30%): **84.45% overlap** (still remarkably stable despite 30% random signal dropout).
 
 *Saved Visualization: `results/figures/hyperparameter_tuning_analysis.png`*
 *Full Log: `results/logs/hyperparameter_tuning_results.json`*
