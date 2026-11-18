@@ -5,3 +5,7 @@ __pycache__/
 *.npy
 *.hdf5
 *.pt
+
+.chart-data-*
+.presentation_build/
+node_modules/

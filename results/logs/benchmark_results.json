@@ -1,0 +1,37 @@
+{
+    "Dataset A (Stationary BBH)": {
+        "num_samples": 500,
+        "mean_mse": 0.014680866899900138,
+        "mean_overlap_percent": 78.08903712928296,
+        "std_overlap_percent": 18.804846119281702,
+        "mean_peak_error_percent": 21.471156263467854
+    },
+    "Dataset B (Non-Stationary)": {
+        "num_samples": 500,
+        "mean_mse": 0.03141660239547491,
+        "mean_overlap_percent": 66.93124550879001,
+        "std_overlap_percent": 20.136603632853422,
+        "mean_peak_error_percent": 24.66028340649791
+    },
+    "Dataset C (Glitches)": {
+        "num_samples": 500,
+        "mean_mse": 0.041337690992280844,
+        "mean_overlap_percent": 66.72105513215065,
+        "std_overlap_percent": 19.8822507955023,
+        "mean_peak_error_percent": 25.155852248612792
+    },
+    "Dataset D (Low SNR / Whispers)": {
+        "num_samples": 500,
+        "mean_mse": 0.007374393335543573,
+        "mean_overlap_percent": 35.475052723288535,
+        "std_overlap_percent": 15.484684727456308,
+        "mean_peak_error_percent": 31.201064372761174
+    },
+    "Dataset E (Binary Neutron Stars)": {
+        "num_samples": 500,
+        "mean_mse": 0.04418448552617338,
+        "mean_overlap_percent": 42.379961404204366,
+        "std_overlap_percent": 20.219777850463718,
+        "mean_peak_error_percent": 297509360.4616801
+    }
+}

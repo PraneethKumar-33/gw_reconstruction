@@ -1,0 +1,1603 @@
+{
+    "metadata": {
+        "epochs_per_trial": 12,
+        "batch_size": 32,
+        "device": "cuda",
+        "timestamp": "2026-10-29 22:40:49"
+    },
+    "tcn_trials": [
+        {
+            "config_name": "TCN-Trial-1 (K=3, Narrow Temporal Filter)",
+            "params": 275809,
+            "hyperparameters": {
+                "name": "TCN-Trial-1 (K=3, Narrow Temporal Filter)",
+                "kernel_size": 3,
+                "lr": 0.001,
+                "dropout": 0.1
+            },
+            "best_val_loss": 0.03732248291373253,
+            "best_val_overlap": 59.525593757629395,
+            "elapsed_sec": 263.60893511772156,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.27026295325160027,
+                    "val_loss": 0.044519629478454587,
+                    "train_overlap": 44.81583848088048,
+                    "val_overlap": 53.49374312460422
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.06343642190098762,
+                    "val_loss": 0.040300129055976866,
+                    "train_overlap": 49.69633552464657,
+                    "val_overlap": 57.32916025966406
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.08409792518615723,
+                    "val_loss": 0.04268615946173668,
+                    "train_overlap": 45.091705579450355,
+                    "val_overlap": 54.33990311771632
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.07894271823763847,
+                    "val_loss": 0.060817437291145325,
+                    "train_overlap": 54.47598008436616,
+                    "val_overlap": 34.20583065170795
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.05727123504877091,
+                    "val_loss": 0.04757492145895958,
+                    "train_overlap": 44.26405202405586,
+                    "val_overlap": 48.680296634510164
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.04532500126957893,
+                    "val_loss": 0.04303161731362343,
+                    "train_overlap": 49.318181734770775,
+                    "val_overlap": 54.97130782231688
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.043050990998744966,
+                    "val_loss": 0.04136458903551102,
+                    "train_overlap": 52.25057270210236,
+                    "val_overlap": 56.804333300888544
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.041527202427387236,
+                    "val_loss": 0.039974939078092575,
+                    "train_overlap": 53.55570451077074,
+                    "val_overlap": 57.85354946255684
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.04029862892627716,
+                    "val_loss": 0.038607532560825344,
+                    "train_overlap": 54.64815989509225,
+                    "val_overlap": 58.70915583968163
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.03940305301547051,
+                    "val_loss": 0.037941923350095746,
+                    "train_overlap": 55.415824411064385,
+                    "val_overlap": 59.22440317571163
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.038797791808843615,
+                    "val_loss": 0.03736811974644661,
+                    "train_overlap": 55.87975081410259,
+                    "val_overlap": 59.45784732997418
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.03855246342718601,
+                    "val_loss": 0.03732248291373253,
+                    "train_overlap": 56.02455991888419,
+                    "val_overlap": 59.525593757629395
+                }
+            ]
+        },
+        {
+            "config_name": "TCN-Trial-2 (K=5, Medium Filter)",
+            "params": 445857,
+            "hyperparameters": {
+                "name": "TCN-Trial-2 (K=5, Medium Filter)",
+                "kernel_size": 5,
+                "lr": 0.001,
+                "dropout": 0.1
+            },
+            "best_val_loss": 0.027037305161356925,
+            "best_val_overlap": 66.47769608944655,
+            "elapsed_sec": 307.6098847389221,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.04472082197666168,
+                    "val_loss": 0.027037305161356925,
+                    "train_overlap": 48.32944401817658,
+                    "val_overlap": 66.39987298697233
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.09879361416399479,
+                    "val_loss": 0.030453365266323088,
+                    "train_overlap": 50.00427209422414,
+                    "val_overlap": 64.24683009684085
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.07735539385676383,
+                    "val_loss": 0.0402252326309681,
+                    "train_overlap": 50.6794289629978,
+                    "val_overlap": 57.009009735286234
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.05406759770214558,
+                    "val_loss": 0.04924862286448479,
+                    "train_overlap": 51.79216812499653,
+                    "val_overlap": 41.431075167958625
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.074396517932415,
+                    "val_loss": 0.036387379229068754,
+                    "train_overlap": 46.82822489339014,
+                    "val_overlap": 58.96368046700955
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.04017314587533474,
+                    "val_loss": 0.038981667399406436,
+                    "train_overlap": 57.21103374389932,
+                    "val_overlap": 56.14647559449077
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.036433698579669,
+                    "val_loss": 0.031671746373176574,
+                    "train_overlap": 58.03300517518073,
+                    "val_overlap": 62.368516890704626
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.03179940713942051,
+                    "val_loss": 0.030253627985715865,
+                    "train_overlap": 61.01789749525487,
+                    "val_overlap": 63.847139813005924
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.03054661826789379,
+                    "val_loss": 0.02934589374065399,
+                    "train_overlap": 62.3418519378174,
+                    "val_overlap": 64.84118767231702
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.029811232909560205,
+                    "val_loss": 0.028163258835673333,
+                    "train_overlap": 63.19467237296048,
+                    "val_overlap": 66.05248752683401
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.02933404852449894,
+                    "val_loss": 0.027790232926607133,
+                    "train_overlap": 63.68662724257447,
+                    "val_overlap": 66.38603939265013
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.029188769087195397,
+                    "val_loss": 0.027702300444245338,
+                    "train_overlap": 63.88684443968232,
+                    "val_overlap": 66.47769608944655
+                }
+            ]
+        },
+        {
+            "config_name": "TCN-Trial-3 (K=7, Baseline Sweetspot)",
+            "params": 615905,
+            "hyperparameters": {
+                "name": "TCN-Trial-3 (K=7, Baseline Sweetspot)",
+                "kernel_size": 7,
+                "lr": 0.001,
+                "dropout": 0.1
+            },
+            "best_val_loss": 0.02663156346976757,
+            "best_val_overlap": 67.34077979922294,
+            "elapsed_sec": 346.55549716949463,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.10202475264668465,
+                    "val_loss": 0.0383237164914608,
+                    "train_overlap": 45.290572504374175,
+                    "val_overlap": 58.7014389745891
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.05891855968534947,
+                    "val_loss": 0.035491833686828615,
+                    "train_overlap": 46.82533847162449,
+                    "val_overlap": 60.67651047557593
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.04083305712044239,
+                    "val_loss": 0.04480774691700935,
+                    "train_overlap": 63.42494062664918,
+                    "val_overlap": 44.726298487745225
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.051265371769666675,
+                    "val_loss": 0.03433605030179024,
+                    "train_overlap": 45.08417245331134,
+                    "val_overlap": 61.988730643689635
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.04371239894628525,
+                    "val_loss": 0.0401751546561718,
+                    "train_overlap": 53.280431110157956,
+                    "val_overlap": 56.91986915916204
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.056134478613734246,
+                    "val_loss": 0.030664331287145616,
+                    "train_overlap": 54.86091029397212,
+                    "val_overlap": 64.46995606720446
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.044838968232274054,
+                    "val_loss": 0.03406578302383423,
+                    "train_overlap": 54.73716209880076,
+                    "val_overlap": 62.003630979359144
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.034067274034023286,
+                    "val_loss": 0.03116511780023575,
+                    "train_overlap": 60.62238651309162,
+                    "val_overlap": 64.22522157728672
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.030785375699400902,
+                    "val_loss": 0.028051930680871008,
+                    "train_overlap": 63.092158938106145,
+                    "val_overlap": 66.24130184650421
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.02905733907222748,
+                    "val_loss": 0.02708686961233616,
+                    "train_overlap": 64.17967718923464,
+                    "val_overlap": 66.93538310229779
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.02849179522693157,
+                    "val_loss": 0.026632486745715143,
+                    "train_overlap": 64.65866152364761,
+                    "val_overlap": 67.23409110158683
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.028220145523548127,
+                    "val_loss": 0.02663156346976757,
+                    "train_overlap": 64.85916235484183,
+                    "val_overlap": 67.34077979922294
+                }
+            ]
+        },
+        {
+            "config_name": "TCN-Trial-4 (K=9, Broad Temporal Filter)",
+            "params": 785953,
+            "hyperparameters": {
+                "name": "TCN-Trial-4 (K=9, Broad Temporal Filter)",
+                "kernel_size": 9,
+                "lr": 0.001,
+                "dropout": 0.1
+            },
+            "best_val_loss": 0.021733833000063898,
+            "best_val_overlap": 71.68229689057917,
+            "elapsed_sec": 371.67014622688293,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.08273640748858452,
+                    "val_loss": 0.050135259211063384,
+                    "train_overlap": 45.718761281897606,
+                    "val_overlap": 47.552012441307305
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.05438106241822243,
+                    "val_loss": 0.03329220068454743,
+                    "train_overlap": 52.33441290985793,
+                    "val_overlap": 62.0309121184051
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.09442550459504127,
+                    "val_loss": 0.036516049444675444,
+                    "train_overlap": 44.86756803509416,
+                    "val_overlap": 58.816270649433136
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.05172906118631363,
+                    "val_loss": 0.03282700502872467,
+                    "train_overlap": 53.29275329629891,
+                    "val_overlap": 61.947306468302855
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.041086106970906255,
+                    "val_loss": 0.03280432912707329,
+                    "train_overlap": 57.88739525981364,
+                    "val_overlap": 61.85509153902531
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.0315913714915514,
+                    "val_loss": 0.02738668619096279,
+                    "train_overlap": 62.25980441980064,
+                    "val_overlap": 67.05334553644062
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.02776135319471359,
+                    "val_loss": 0.024631643310189247,
+                    "train_overlap": 65.65397798749618,
+                    "val_overlap": 69.18529840623377
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.025812341421842574,
+                    "val_loss": 0.02298247542977333,
+                    "train_overlap": 67.40665589629207,
+                    "val_overlap": 70.46029038839042
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.02472252930700779,
+                    "val_loss": 0.02258311867713928,
+                    "train_overlap": 68.34377416367643,
+                    "val_overlap": 70.89740866459906
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.023972037568688393,
+                    "val_loss": 0.02194032445549965,
+                    "train_overlap": 68.92269701827317,
+                    "val_overlap": 71.5557858131826
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.023642767921090126,
+                    "val_loss": 0.02181716178357601,
+                    "train_overlap": 69.17942601626274,
+                    "val_overlap": 71.65351673029363
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.023511797353625297,
+                    "val_loss": 0.021733833000063898,
+                    "train_overlap": 69.3051894909935,
+                    "val_overlap": 71.68229689057917
+                }
+            ]
+        },
+        {
+            "config_name": "TCN-Trial-5 (LR=3e-4, Lower Rate)",
+            "params": 615905,
+            "hyperparameters": {
+                "name": "TCN-Trial-5 (LR=3e-4, Lower Rate)",
+                "kernel_size": 7,
+                "lr": 0.0003,
+                "dropout": 0.1
+            },
+            "best_val_loss": 0.021095067247748376,
+            "best_val_overlap": 72.00375907234847,
+            "elapsed_sec": 336.8799138069153,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.06298192684352398,
+                    "val_loss": 0.04661988949775696,
+                    "train_overlap": 50.25379613970872,
+                    "val_overlap": 48.30380103178322
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.05514415015280247,
+                    "val_loss": 0.03242573088407517,
+                    "train_overlap": 53.93099274714477,
+                    "val_overlap": 62.34199870377779
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.04655223236978054,
+                    "val_loss": 0.03248642703890801,
+                    "train_overlap": 53.01797505429422,
+                    "val_overlap": 62.73619522452354
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.031054444804787636,
+                    "val_loss": 0.02841219091415405,
+                    "train_overlap": 62.4294805025449,
+                    "val_overlap": 65.5121243081987
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.02840474669635296,
+                    "val_loss": 0.025263649255037306,
+                    "train_overlap": 65.07315663574263,
+                    "val_overlap": 67.83465156545863
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.0259325500279665,
+                    "val_loss": 0.023741200491786005,
+                    "train_overlap": 67.17734046281548,
+                    "val_overlap": 69.82160209491849
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.024708400771021842,
+                    "val_loss": 0.02243394473195076,
+                    "train_overlap": 68.35932408967057,
+                    "val_overlap": 70.91979176886379
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.02378477340936661,
+                    "val_loss": 0.021904394030570984,
+                    "train_overlap": 69.08916322023143,
+                    "val_overlap": 71.00368992984295
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.023109597101807593,
+                    "val_loss": 0.02139525254070759,
+                    "train_overlap": 69.64490172970109,
+                    "val_overlap": 71.86661420613527
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.022777608528733253,
+                    "val_loss": 0.021201521188020708,
+                    "train_overlap": 69.92603771922877,
+                    "val_overlap": 71.86251278594136
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.02263162796199322,
+                    "val_loss": 0.021151980876922608,
+                    "train_overlap": 70.08220614478924,
+                    "val_overlap": 71.90076939575374
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.02255958975851536,
+                    "val_loss": 0.021095067247748376,
+                    "train_overlap": 70.15457269148901,
+                    "val_overlap": 72.00375907234847
+                }
+            ]
+        },
+        {
+            "config_name": "TCN-Trial-6 (Dropout=0.2, High Reg)",
+            "params": 615905,
+            "hyperparameters": {
+                "name": "TCN-Trial-6 (Dropout=0.2, High Reg)",
+                "kernel_size": 7,
+                "lr": 0.001,
+                "dropout": 0.2
+            },
+            "best_val_loss": 0.020802189871668816,
+            "best_val_overlap": 72.38497430384159,
+            "elapsed_sec": 334.0331130027771,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.05240252082049847,
+                    "val_loss": 0.027830082759261132,
+                    "train_overlap": 45.24447541523223,
+                    "val_overlap": 65.68761460185051
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.04872702389955521,
+                    "val_loss": 0.026086965084075927,
+                    "train_overlap": 53.499514840706254,
+                    "val_overlap": 67.44745311252774
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.03943674989044666,
+                    "val_loss": 0.03076888859272003,
+                    "train_overlap": 60.65009264094988,
+                    "val_overlap": 63.263389863073826
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.03419871634244919,
+                    "val_loss": 0.027326731219887733,
+                    "train_overlap": 61.662820283882326,
+                    "val_overlap": 66.49765611812472
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.04016313798725605,
+                    "val_loss": 0.03131161159276962,
+                    "train_overlap": 59.72960761668,
+                    "val_overlap": 60.75713695660233
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.03120689330995083,
+                    "val_loss": 0.02708608675003052,
+                    "train_overlap": 60.81449476061389,
+                    "val_overlap": 67.19894559457899
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.028048440679907798,
+                    "val_loss": 0.02607324731349945,
+                    "train_overlap": 64.7522497041151,
+                    "val_overlap": 68.46272114515305
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.02625869655609131,
+                    "val_loss": 0.022999221786856653,
+                    "train_overlap": 66.71999342672062,
+                    "val_overlap": 70.64818720817566
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.024659604609012602,
+                    "val_loss": 0.021425610065460204,
+                    "train_overlap": 68.25072768004611,
+                    "val_overlap": 72.05071700364351
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.023733906030654908,
+                    "val_loss": 0.020957650125026702,
+                    "train_overlap": 69.01342149372212,
+                    "val_overlap": 72.38497430384159
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.02331792064011097,
+                    "val_loss": 0.020887630879878997,
+                    "train_overlap": 69.40390395843716,
+                    "val_overlap": 72.13011630401014
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.023158175811171532,
+                    "val_loss": 0.020802189871668816,
+                    "train_overlap": 69.52277885450167,
+                    "val_overlap": 72.28475670441985
+                }
+            ]
+        }
+    ],
+    "transformer_trials": [
+        {
+            "config_name": "TF-Trial-1 (P=8, Fine 512 Tokens)",
+            "params": 198081,
+            "hyperparameters": {
+                "name": "TF-Trial-1 (P=8, Fine 512 Tokens)",
+                "patch_size": 8,
+                "d_model": 64,
+                "nhead": 2,
+                "num_layers": 3,
+                "lr": 0.001
+            },
+            "best_val_loss": 0.02670470242202282,
+            "best_val_overlap": 68.29313199520111,
+            "elapsed_sec": 99.0670440196991,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.039084132969379425,
+                    "val_loss": 0.03383207520842552,
+                    "train_overlap": 54.80043739000393,
+                    "val_overlap": 60.876599055528644
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.03373382855951786,
+                    "val_loss": 0.03218686726689339,
+                    "train_overlap": 60.122517260164024,
+                    "val_overlap": 63.418325720727445
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.03189671625196934,
+                    "val_loss": 0.031761711180210116,
+                    "train_overlap": 61.662238644994794,
+                    "val_overlap": 64.66455023288727
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.029986041858792306,
+                    "val_loss": 0.029378642618656158,
+                    "train_overlap": 62.875154177448714,
+                    "val_overlap": 65.64076984673738
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.02901369458436966,
+                    "val_loss": 0.02807632403075695,
+                    "train_overlap": 63.65038778684102,
+                    "val_overlap": 66.1242991283536
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.028611937925219537,
+                    "val_loss": 0.028490493759512903,
+                    "train_overlap": 64.09745745477267,
+                    "val_overlap": 66.44724138677121
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.02821198983490467,
+                    "val_loss": 0.02768009977042675,
+                    "train_overlap": 64.45572830496822,
+                    "val_overlap": 66.84821907877922
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.027758653834462167,
+                    "val_loss": 0.02864233450591564,
+                    "train_overlap": 64.79822794154533,
+                    "val_overlap": 67.23737393021584
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.02732712239027023,
+                    "val_loss": 0.02705306649208069,
+                    "train_overlap": 65.18440489033237,
+                    "val_overlap": 67.65513611435891
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.027043182626366614,
+                    "val_loss": 0.027410677194595338,
+                    "train_overlap": 65.54647339927033,
+                    "val_overlap": 68.04014742672443
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.026754141867160797,
+                    "val_loss": 0.02670470242202282,
+                    "train_overlap": 65.76430552136154,
+                    "val_overlap": 68.22183391451836
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.026708040162920953,
+                    "val_loss": 0.0268193761408329,
+                    "train_overlap": 65.87775411596522,
+                    "val_overlap": 68.29313199520111
+                }
+            ]
+        },
+        {
+            "config_name": "TF-Trial-2 (P=16, d=128, Baseline Sweet)",
+            "params": 941249,
+            "hyperparameters": {
+                "name": "TF-Trial-2 (P=16, d=128, Baseline Sweet)",
+                "patch_size": 16,
+                "d_model": 128,
+                "nhead": 4,
+                "num_layers": 4,
+                "lr": 0.001
+            },
+            "best_val_loss": 0.01850276228785515,
+            "best_val_overlap": 76.49983084350825,
+            "elapsed_sec": 104.29829621315002,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.037312277913093564,
+                    "val_loss": 0.030604375928640366,
+                    "train_overlap": 56.0540326308841,
+                    "val_overlap": 64.79150139093399
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.029566742599010466,
+                    "val_loss": 0.026359628543257713,
+                    "train_overlap": 63.980973543459555,
+                    "val_overlap": 67.24111520946026
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.0272188328653574,
+                    "val_loss": 0.025322618499398233,
+                    "train_overlap": 65.74751746309921,
+                    "val_overlap": 68.61979247182607
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.025798801869153978,
+                    "val_loss": 0.024042823672294617,
+                    "train_overlap": 66.81804212660063,
+                    "val_overlap": 69.51549897491932
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.024844786480069162,
+                    "val_loss": 0.023820473805069922,
+                    "train_overlap": 67.66599991908296,
+                    "val_overlap": 69.85599692761897
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.023896391198039053,
+                    "val_loss": 0.022506176456809045,
+                    "train_overlap": 68.56186539195478,
+                    "val_overlap": 71.2304271876812
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.02286750051379204,
+                    "val_loss": 0.021286476731300356,
+                    "train_overlap": 69.66411652877578,
+                    "val_overlap": 73.01370160281658
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.021676323562860488,
+                    "val_loss": 0.020271200850605964,
+                    "train_overlap": 71.22249368028716,
+                    "val_overlap": 74.5330605521798
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.020852729111909867,
+                    "val_loss": 0.019462971210479737,
+                    "train_overlap": 72.29904780937359,
+                    "val_overlap": 75.39856390655041
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.02022999532520771,
+                    "val_loss": 0.018772221133112908,
+                    "train_overlap": 72.90300130676478,
+                    "val_overlap": 76.08619927465917
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.019847078114748,
+                    "val_loss": 0.018766908332705497,
+                    "train_overlap": 73.32093028482049,
+                    "val_overlap": 76.40146894156933
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.019679720893502235,
+                    "val_loss": 0.01850276228785515,
+                    "train_overlap": 73.56188103421592,
+                    "val_overlap": 76.49983084350825
+                }
+            ]
+        },
+        {
+            "config_name": "TF-Trial-3 (P=32, Coarse 128 Tokens)",
+            "params": 1074369,
+            "hyperparameters": {
+                "name": "TF-Trial-3 (P=32, Coarse 128 Tokens)",
+                "patch_size": 32,
+                "d_model": 128,
+                "nhead": 4,
+                "num_layers": 4,
+                "lr": 0.001
+            },
+            "best_val_loss": 0.019537154823541642,
+            "best_val_overlap": 73.98907902389766,
+            "elapsed_sec": 69.31894373893738,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.037404759213328365,
+                    "val_loss": 0.02976190558075905,
+                    "train_overlap": 56.59523445093878,
+                    "val_overlap": 65.55545738786459
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.028635424122214318,
+                    "val_loss": 0.025095408111810685,
+                    "train_overlap": 64.66780967609957,
+                    "val_overlap": 69.00494740605355
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.025393252208828924,
+                    "val_loss": 0.023219258099794388,
+                    "train_overlap": 67.45613166189287,
+                    "val_overlap": 70.48013505637645
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.02392759831249714,
+                    "val_loss": 0.022149291038513184,
+                    "train_overlap": 68.70614274935797,
+                    "val_overlap": 71.47693724408745
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.022861599266529083,
+                    "val_loss": 0.021161733612418174,
+                    "train_overlap": 69.66461529959925,
+                    "val_overlap": 72.02403013780713
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.02198641602694988,
+                    "val_loss": 0.020915898814797402,
+                    "train_overlap": 70.44969512182287,
+                    "val_overlap": 72.61009681224823
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.02134061884880066,
+                    "val_loss": 0.019963523238897322,
+                    "train_overlap": 71.09573179645231,
+                    "val_overlap": 73.42334922552108
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.020984914623200894,
+                    "val_loss": 0.020265901267528533,
+                    "train_overlap": 71.60623358199373,
+                    "val_overlap": 73.30078536272049
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.02071146447956562,
+                    "val_loss": 0.019794157952070235,
+                    "train_overlap": 71.78537992574275,
+                    "val_overlap": 73.66757412701845
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.02033744287490845,
+                    "val_loss": 0.019598041743040084,
+                    "train_overlap": 72.09671371113508,
+                    "val_overlap": 73.7699415847659
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.02017717404663563,
+                    "val_loss": 0.019543373271822928,
+                    "train_overlap": 72.31245619850233,
+                    "val_overlap": 73.93183776587247
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.02005767199397087,
+                    "val_loss": 0.019537154823541642,
+                    "train_overlap": 72.35374933549902,
+                    "val_overlap": 73.98907902389766
+                }
+            ]
+        },
+        {
+            "config_name": "TF-Trial-4 (Deep 6-Layer, d=128)",
+            "params": 1337793,
+            "hyperparameters": {
+                "name": "TF-Trial-4 (Deep 6-Layer, d=128)",
+                "patch_size": 16,
+                "d_model": 128,
+                "nhead": 4,
+                "num_layers": 6,
+                "lr": 0.0008
+            },
+            "best_val_loss": 0.02181846010684967,
+            "best_val_overlap": 72.0834310978651,
+            "elapsed_sec": 132.75996685028076,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.038463313549757,
+                    "val_loss": 0.032340579807758334,
+                    "train_overlap": 55.247835881791985,
+                    "val_overlap": 63.79123964905739
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.029842609405517577,
+                    "val_loss": 0.02759597985446453,
+                    "train_overlap": 63.5294577822322,
+                    "val_overlap": 67.09457303434611
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.026945737719535828,
+                    "val_loss": 0.024944426327943803,
+                    "train_overlap": 65.89614389515482,
+                    "val_overlap": 68.69670022428036
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.025483967617154123,
+                    "val_loss": 0.025838738307356834,
+                    "train_overlap": 67.1242953663692,
+                    "val_overlap": 69.70465659350157
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.02480370557308197,
+                    "val_loss": 0.025097098633646966,
+                    "train_overlap": 67.8179144446738,
+                    "val_overlap": 70.01885526776313
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.02391797724366188,
+                    "val_loss": 0.023367034003138543,
+                    "train_overlap": 68.54760492732748,
+                    "val_overlap": 70.20764431208372
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.023342470303177834,
+                    "val_loss": 0.023067488461732864,
+                    "train_overlap": 69.05744784469717,
+                    "val_overlap": 70.84710450023412
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.02295186823606491,
+                    "val_loss": 0.022425560280680656,
+                    "train_overlap": 69.48990566000576,
+                    "val_overlap": 71.42250254899264
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.022588130667805673,
+                    "val_loss": 0.022141871109604836,
+                    "train_overlap": 69.81593017270788,
+                    "val_overlap": 71.69570676386357
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.022305317416787148,
+                    "val_loss": 0.022007538005709648,
+                    "train_overlap": 70.07598686255515,
+                    "val_overlap": 71.87287543863057
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.022176277846097946,
+                    "val_loss": 0.02186954416334629,
+                    "train_overlap": 70.19501174760516,
+                    "val_overlap": 72.06072584688663
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.022032710209488868,
+                    "val_loss": 0.02181846010684967,
+                    "train_overlap": 70.31762593432795,
+                    "val_overlap": 72.0834310978651
+                }
+            ]
+        },
+        {
+            "config_name": "TF-Trial-5 (LR=2e-3, High Learning Rate)",
+            "params": 941249,
+            "hyperparameters": {
+                "name": "TF-Trial-5 (LR=2e-3, High Learning Rate)",
+                "patch_size": 16,
+                "d_model": 128,
+                "nhead": 4,
+                "num_layers": 4,
+                "lr": 0.002
+            },
+            "best_val_loss": 0.016381677910685538,
+            "best_val_overlap": 78.75802685171365,
+            "elapsed_sec": 94.36400389671326,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.038453559458255765,
+                    "val_loss": 0.03139879736304283,
+                    "train_overlap": 55.49508607633224,
+                    "val_overlap": 63.430585785210134
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.029809267565608026,
+                    "val_loss": 0.028134041309356688,
+                    "train_overlap": 63.792865430610256,
+                    "val_overlap": 66.64676103442908
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.026898463547229766,
+                    "val_loss": 0.025747877165675163,
+                    "train_overlap": 66.15792781719938,
+                    "val_overlap": 68.94670398086309
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.025114494815468787,
+                    "val_loss": 0.024306573197245596,
+                    "train_overlap": 67.5054516075179,
+                    "val_overlap": 69.26329369395971
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.024346353068947793,
+                    "val_loss": 0.023033614799380302,
+                    "train_overlap": 68.34680465780839,
+                    "val_overlap": 70.57909833341837
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.023344017818570137,
+                    "val_loss": 0.022032032057642936,
+                    "train_overlap": 69.18957023511176,
+                    "val_overlap": 71.21076621860266
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.022352239325642585,
+                    "val_loss": 0.020841508015990256,
+                    "train_overlap": 70.32882262710481,
+                    "val_overlap": 73.26722825467587
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.020656046584248543,
+                    "val_loss": 0.019586058154702185,
+                    "train_overlap": 72.34478489097673,
+                    "val_overlap": 75.59387592822313
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.019428837187588213,
+                    "val_loss": 0.017686937600374222,
+                    "train_overlap": 73.93104793042876,
+                    "val_overlap": 77.19393376410008
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.018396000578999518,
+                    "val_loss": 0.016909618005156515,
+                    "train_overlap": 75.05178657928482,
+                    "val_overlap": 78.13257249593735
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.01781466344743967,
+                    "val_loss": 0.016490571916103362,
+                    "train_overlap": 75.63742669008207,
+                    "val_overlap": 78.70871704518795
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.017543733447790148,
+                    "val_loss": 0.016381677910685538,
+                    "train_overlap": 76.00736558513891,
+                    "val_overlap": 78.75802685171365
+                }
+            ]
+        }
+    ],
+    "dae_trials": [
+        {
+            "config_name": "DAE-Trial-1 (Mask=5%, Light Perturbation)",
+            "params": 1656017,
+            "hyperparameters": {
+                "name": "DAE-Trial-1 (Mask=5%, Light Perturbation)",
+                "mask_ratio": 0.05,
+                "lr": 0.001
+            },
+            "best_val_loss": 0.009035158060491086,
+            "best_val_overlap": 86.10420307219029,
+            "elapsed_sec": 70.26951456069946,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.023973207317292692,
+                    "val_loss": 0.013538514785468579,
+                    "train_overlap": 72.35142546670541,
+                    "val_overlap": 80.15382104590535
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.014269542917609214,
+                    "val_loss": 0.011962265253067017,
+                    "train_overlap": 79.94304580923054,
+                    "val_overlap": 82.97778721433133
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.012816553600132466,
+                    "val_loss": 0.012040826790034771,
+                    "train_overlap": 81.41657183207572,
+                    "val_overlap": 83.98376464098692
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.011770684465765954,
+                    "val_loss": 0.01050846717506647,
+                    "train_overlap": 82.40791701055133,
+                    "val_overlap": 84.26214416176082
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.011246005542576314,
+                    "val_loss": 0.010384956412017345,
+                    "train_overlap": 82.88088771298354,
+                    "val_overlap": 84.66445630341768
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.010748215220868588,
+                    "val_loss": 0.009177264377474785,
+                    "train_overlap": 83.55666277240962,
+                    "val_overlap": 85.13212346732615
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.010323015499860049,
+                    "val_loss": 0.010070417173206806,
+                    "train_overlap": 84.02387960294728,
+                    "val_overlap": 84.72446219921113
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.009989119630306959,
+                    "val_loss": 0.009492661356925964,
+                    "train_overlap": 84.3556142512709,
+                    "val_overlap": 85.18488823771476
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.009477597992867232,
+                    "val_loss": 0.009942172922194004,
+                    "train_overlap": 84.9450840663165,
+                    "val_overlap": 85.64365928173065
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.009104713022708892,
+                    "val_loss": 0.009237143263220787,
+                    "train_overlap": 85.41377272307872,
+                    "val_overlap": 85.89200049638748
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.008890781037509442,
+                    "val_loss": 0.009035158060491086,
+                    "train_overlap": 85.66063584247604,
+                    "val_overlap": 85.8982830375433
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.008740613717585803,
+                    "val_loss": 0.009192573256790638,
+                    "train_overlap": 85.92218462396413,
+                    "val_overlap": 86.10420307219029
+                }
+            ]
+        },
+        {
+            "config_name": "DAE-Trial-2 (Mask=10%, Optimal Corruption)",
+            "params": 1656017,
+            "hyperparameters": {
+                "name": "DAE-Trial-2 (Mask=10%, Optimal Corruption)",
+                "mask_ratio": 0.1,
+                "lr": 0.001
+            },
+            "best_val_loss": 0.017624819532036783,
+            "best_val_overlap": 85.54153959155083,
+            "elapsed_sec": 70.2389121055603,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.027344537124037744,
+                    "val_loss": 0.0241023837774992,
+                    "train_overlap": 69.01661019576714,
+                    "val_overlap": 80.94728708539624
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.017746913246810436,
+                    "val_loss": 0.022726861745119096,
+                    "train_overlap": 76.7764343352057,
+                    "val_overlap": 82.61840076744556
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.01584246473759413,
+                    "val_loss": 0.022441173121333122,
+                    "train_overlap": 78.87021131704095,
+                    "val_overlap": 83.41425759643316
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.015119304068386555,
+                    "val_loss": 0.020801142677664756,
+                    "train_overlap": 79.47576432395726,
+                    "val_overlap": 84.01272522732616
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.014620074175298214,
+                    "val_loss": 0.017624819532036783,
+                    "train_overlap": 80.12328730740627,
+                    "val_overlap": 84.13549471050501
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.013841135889291763,
+                    "val_loss": 0.021153514876961706,
+                    "train_overlap": 80.68186630463461,
+                    "val_overlap": 84.09626989215613
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.013708348639309406,
+                    "val_loss": 0.018713152542710304,
+                    "train_overlap": 80.87807038906031,
+                    "val_overlap": 84.45804354697466
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.0133271649107337,
+                    "val_loss": 0.02060803584754467,
+                    "train_overlap": 81.38108176523819,
+                    "val_overlap": 85.04618986397982
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.012940535418689251,
+                    "val_loss": 0.01991186599433422,
+                    "train_overlap": 81.86381982625463,
+                    "val_overlap": 84.87333118915558
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.012299834728240967,
+                    "val_loss": 0.0207171728014946,
+                    "train_overlap": 82.27392414305359,
+                    "val_overlap": 85.36733366101981
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.01214752396941185,
+                    "val_loss": 0.020931331381201745,
+                    "train_overlap": 82.63728894768283,
+                    "val_overlap": 85.50673424005508
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.011599921248853206,
+                    "val_loss": 0.02050798301398754,
+                    "train_overlap": 82.96299850437791,
+                    "val_overlap": 85.54153959155083
+                }
+            ]
+        },
+        {
+            "config_name": "DAE-Trial-3 (Mask=20%, Heavy Perturbation)",
+            "params": 1656017,
+            "hyperparameters": {
+                "name": "DAE-Trial-3 (Mask=20%, Heavy Perturbation)",
+                "mask_ratio": 0.2,
+                "lr": 0.001
+            },
+            "best_val_loss": 0.017804756835103033,
+            "best_val_overlap": 85.07131336927414,
+            "elapsed_sec": 70.80178093910217,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.031683842286467555,
+                    "val_loss": 0.030465519219636916,
+                    "train_overlap": 63.56342622289376,
+                    "val_overlap": 80.06287816613913
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.024760864317417145,
+                    "val_loss": 0.023030237779021263,
+                    "train_overlap": 69.75627255052677,
+                    "val_overlap": 81.7536179713905
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.02286249440908432,
+                    "val_loss": 0.021461385875940323,
+                    "train_overlap": 71.52114605011884,
+                    "val_overlap": 82.65844145417213
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.022124084062874316,
+                    "val_loss": 0.0236184271723032,
+                    "train_overlap": 72.45284009941142,
+                    "val_overlap": 83.69416268765927
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.02130205824226141,
+                    "val_loss": 0.02291090312600136,
+                    "train_overlap": 73.07045683425385,
+                    "val_overlap": 83.73261412531137
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.020708141699433327,
+                    "val_loss": 0.022113445684313775,
+                    "train_overlap": 73.6668123784606,
+                    "val_overlap": 83.79309839308262
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.02025585090368986,
+                    "val_loss": 0.019951868414878844,
+                    "train_overlap": 74.19549343842955,
+                    "val_overlap": 83.82117938399315
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.02026483339071274,
+                    "val_loss": 0.020492388889193535,
+                    "train_overlap": 74.36116426968947,
+                    "val_overlap": 84.60937855690717
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.019474417962133884,
+                    "val_loss": 0.017804756835103033,
+                    "train_overlap": 75.01768035005371,
+                    "val_overlap": 84.34999251067639
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.01890826787054539,
+                    "val_loss": 0.022123069539666175,
+                    "train_overlap": 75.69436438931189,
+                    "val_overlap": 84.8760490372777
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.018980513483285905,
+                    "val_loss": 0.020829453244805337,
+                    "train_overlap": 75.54957367985044,
+                    "val_overlap": 84.91852981895208
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.018923309452831744,
+                    "val_loss": 0.020179281994700433,
+                    "train_overlap": 75.90893943808041,
+                    "val_overlap": 85.07131336927414
+                }
+            ]
+        },
+        {
+            "config_name": "DAE-Trial-4 (Mask=30%, Extreme Dropout)",
+            "params": 1656017,
+            "hyperparameters": {
+                "name": "DAE-Trial-4 (Mask=30%, Extreme Dropout)",
+                "mask_ratio": 0.3,
+                "lr": 0.001
+            },
+            "best_val_loss": 0.017373209446668626,
+            "best_val_overlap": 84.44617963135242,
+            "elapsed_sec": 70.20070314407349,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.03913976937532425,
+                    "val_loss": 0.02330368748307228,
+                    "train_overlap": 54.69846254298063,
+                    "val_overlap": 79.24869787245989
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.030898535192012785,
+                    "val_loss": 0.022949182897806168,
+                    "train_overlap": 62.59897707161508,
+                    "val_overlap": 82.03084269016982
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.029904336035251618,
+                    "val_loss": 0.021325791850686074,
+                    "train_overlap": 63.3182555804291,
+                    "val_overlap": 81.76887108311057
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.02886037005484104,
+                    "val_loss": 0.01850481477379799,
+                    "train_overlap": 64.83105208291018,
+                    "val_overlap": 82.61218428388239
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.02877603094279766,
+                    "val_loss": 0.0175822461694479,
+                    "train_overlap": 64.55036658388744,
+                    "val_overlap": 83.0404250651598
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.02833597594499588,
+                    "val_loss": 0.01812171922624111,
+                    "train_overlap": 64.91624861064629,
+                    "val_overlap": 83.19129477515817
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.02824512580037117,
+                    "val_loss": 0.018504983544349672,
+                    "train_overlap": 65.43176592886448,
+                    "val_overlap": 83.76419115066528
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.027257965564727784,
+                    "val_loss": 0.019510771155357362,
+                    "train_overlap": 66.30293179104191,
+                    "val_overlap": 83.43763293027878
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.027107982620596886,
+                    "val_loss": 0.01992372067272663,
+                    "train_overlap": 66.78337995730345,
+                    "val_overlap": 84.2317058838904
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.026026396468281747,
+                    "val_loss": 0.017757667914032937,
+                    "train_overlap": 67.69552697785548,
+                    "val_overlap": 83.94206785224378
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.026646214209496973,
+                    "val_loss": 0.017373209446668626,
+                    "train_overlap": 67.20596957887487,
+                    "val_overlap": 84.36048121973873
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.026341841652989386,
+                    "val_loss": 0.01794643549621105,
+                    "train_overlap": 67.22339100873505,
+                    "val_overlap": 84.44617963135242
+                }
+            ]
+        },
+        {
+            "config_name": "DAE-Trial-5 (LR=5e-4, Conservative Rate)",
+            "params": 1656017,
+            "hyperparameters": {
+                "name": "DAE-Trial-5 (LR=5e-4, Conservative Rate)",
+                "mask_ratio": 0.1,
+                "lr": 0.0005
+            },
+            "best_val_loss": 0.018142892837524415,
+            "best_val_overlap": 85.34909907355905,
+            "elapsed_sec": 70.3725893497467,
+            "history": [
+                {
+                    "epoch": 1,
+                    "train_loss": 0.025422642104327677,
+                    "val_loss": 0.021479300051927566,
+                    "train_overlap": 70.49533943841816,
+                    "val_overlap": 81.08988994061946
+                },
+                {
+                    "epoch": 2,
+                    "train_loss": 0.01732431586831808,
+                    "val_loss": 0.018958137467503546,
+                    "train_overlap": 77.24051577944773,
+                    "val_overlap": 83.05602962095291
+                },
+                {
+                    "epoch": 3,
+                    "train_loss": 0.01578602632880211,
+                    "val_loss": 0.020888218864798545,
+                    "train_overlap": 78.60003848571796,
+                    "val_overlap": 83.29807409085333
+                },
+                {
+                    "epoch": 4,
+                    "train_loss": 0.015009197153151035,
+                    "val_loss": 0.018142892837524415,
+                    "train_overlap": 79.59907029811293,
+                    "val_overlap": 84.03179115951062
+                },
+                {
+                    "epoch": 5,
+                    "train_loss": 0.014226137548685075,
+                    "val_loss": 0.019480213746428488,
+                    "train_overlap": 80.24323712093756,
+                    "val_overlap": 84.53248902559281
+                },
+                {
+                    "epoch": 6,
+                    "train_loss": 0.013890827544033528,
+                    "val_loss": 0.020971464022994043,
+                    "train_overlap": 80.66372722815431,
+                    "val_overlap": 84.62630912661552
+                },
+                {
+                    "epoch": 7,
+                    "train_loss": 0.013357820607721806,
+                    "val_loss": 0.01913501738011837,
+                    "train_overlap": 81.25849729944021,
+                    "val_overlap": 84.36466742306948
+                },
+                {
+                    "epoch": 8,
+                    "train_loss": 0.012994351223111152,
+                    "val_loss": 0.021226107805967332,
+                    "train_overlap": 81.61470180572941,
+                    "val_overlap": 84.84744617268443
+                },
+                {
+                    "epoch": 9,
+                    "train_loss": 0.012831970058381558,
+                    "val_loss": 0.021526382163167,
+                    "train_overlap": 81.83462316982187,
+                    "val_overlap": 85.28055350482464
+                },
+                {
+                    "epoch": 10,
+                    "train_loss": 0.012625814601778983,
+                    "val_loss": 0.020896761551499367,
+                    "train_overlap": 82.12863871904555,
+                    "val_overlap": 85.17483280152082
+                },
+                {
+                    "epoch": 11,
+                    "train_loss": 0.012041592538356781,
+                    "val_loss": 0.020425666972994805,
+                    "train_overlap": 82.7102528296411,
+                    "val_overlap": 85.28816818445921
+                },
+                {
+                    "epoch": 12,
+                    "train_loss": 0.011967600345611572,
+                    "val_loss": 0.020452222034335138,
+                    "train_overlap": 82.81568208718673,
+                    "val_overlap": 85.34909907355905
+                }
+            ]
+        }
+    ]
+}

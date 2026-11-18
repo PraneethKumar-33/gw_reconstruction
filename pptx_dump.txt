@@ -1,0 +1,459 @@
+=== SLIDE 1 ===
+[Shape 2]:
+01 / 13
+---
+[Shape 3]:
+Gravitational Wave
+Signal Reconstruction
+---
+[Shape 4]:
+from LIGO Detector Noise Using Deep Learning
+---
+[Shape 5]:
+TCN, Transformer and Denoising Autoencoder
+Comparative Project Presentation
+---
+[Shape 6]:
+PROJECT TEAM — B.Tech CSE (AI)
+---
+[Shape 7]:
+AM.SC.U4AIE24120  Kaki Hemavardhan
+Autoencoder
+---
+[Shape 8]:
+AM.SC.U4AIE24133  Pamu Praneeth Kumar
+Transformer
+---
+[Shape 9]:
+AM.SC.U4AIE24167  Naru Nikhith Reddy
+TCN
+---
+=== SLIDE 2 ===
+[Shape 2]:
+Problem statement and motivation
+---
+[Shape 3]:
+02 / 13
+---
+[Shape 4]:
+Recovering weak signals from changing detector noise
+---
+[Shape 6]:
+The problem
+---
+[Shape 7]:
+Reconstruct the time-domain waveform while suppressing noise, drift and short instrumental glitches.
+---
+[Shape 9]:
+Why it matters
+---
+[Shape 10]:
+Reliable waveform recovery can support rapid follow-up and the study of compact-object mergers.
+---
+[Shape 12]:
+Existing limitation
+---
+[Shape 13]:
+Template-based searches depend on waveform coverage. Detection accuracy alone does not measure reconstruction fidelity.
+---
+[Shape 15]:
+Project question
+---
+[Shape 16]:
+How do local convolutions, global attention and an encoder-decoder respond to the same difficult conditions?
+---
+[Shape 17]:
+Scope: waveform reconstruction and denoising. Detection significance is not evaluated.
+---
+=== SLIDE 3 ===
+[Shape 2]:
+Objectives
+---
+[Shape 3]:
+03 / 13
+---
+[Shape 4]:
+01
+---
+[Shape 5]:
+Implement three reconstructors
+---
+[Shape 6]:
+TCN, temporal Transformer and convolutional denoising autoencoder.
+---
+[Shape 7]:
+02
+---
+[Shape 8]:
+Measure robustness
+---
+[Shape 9]:
+Five conditions, with 500 test pairs per condition.
+---
+[Shape 10]:
+03
+---
+[Shape 11]:
+Study training choices
+---
+[Shape 12]:
+Sixteen tuning trials, with 12 epochs per trial.
+---
+[Shape 13]:
+04
+---
+[Shape 14]:
+Inspect reconstruction evidence
+---
+[Shape 15]:
+Waveform overlays, training curves, spectrograms and a real-event demonstration.
+---
+[Shape 16]:
+Expected outcome: characterize each model’s strengths and failure modes.
+---
+=== SLIDE 4 ===
+[Shape 2]:
+Literature review and research gap
+---
+[Shape 3]:
+04 / 13
+---
+[Table 4]:
+  Row 0: Study | Model / approach | Scope and limitation
+  Row 1: Abbott et al. (2016) | Matched-filter search and waveform interpretation | Template-based search depends on modeled waveform coverage.
+  Row 2: George & Huerta (2018) | Deep Filtering: time-series CNNs | Detection and parameter estimation; not the same waveform-reconstruction task.
+  Row 3: Gabbard et al. (2018) | Deep CNN detection | Matched-filter-like sensitivity in the tested setup; no direct waveform reconstruction.
+  Row 4: Shen et al. (2019) | Enhanced recurrent denoising autoencoder (EDRDAE) | Prior work already addresses denoising; our TCN–Transformer–DAE comparison differs.
+---
+[Shape 5]:
+Research gap addressed by this project
+---
+[Shape 6]:
+A common reconstruction benchmark across stationary noise, drift, glitches, low SNR and an unseen low-mass waveform regime.
+---
+[Shape 7]:
+References and links are included in speaker notes. No claim of being the first denoising method.
+---
+=== SLIDE 5 ===
+[Shape 2]:
+Novelty and team contribution
+---
+[Shape 3]:
+05 / 13
+---
+[Shape 5]:
+Project contribution
+---
+[Shape 6]:
+A shared pipeline compares three reconstruction architectures across five controlled conditions, with tuning and a Streamlit demo.
+---
+[Shape 8]:
+What is different
+---
+[Shape 9]:
+The contribution is the integrated comparison and stress testing, rather than a new fundamental neural-network architecture.
+---
+[Shape 10]:
+TEAM DEVELOPMENT
+---
+[Shape 12]:
+Hemavardhan
+---
+[Shape 13]:
+Data acquisition, preprocessing and literature review.
+Presents the autoencoder.
+---
+[Shape 15]:
+Praneeth
+---
+[Shape 16]:
+Model architecture, waveform injection and benchmark design.
+Presents the Transformer.
+---
+[Shape 18]:
+Nikhith
+---
+[Shape 19]:
+Training, optimization and evaluation.
+Presents the TCN.
+---
+[Shape 20]:
+All three models use clean waveform targets during training.
+---
+[Shape 21]:
+No template-bank search at inference. Training still uses simulated waveform pairs.
+---
+=== SLIDE 6 ===
+[Shape 2]:
+Dataset details
+---
+[Shape 3]:
+06 / 13
+---
+[Table 4]:
+  Row 0: Dataset | Condition | Train | Validation | Test
+  Row 1: A | Stationary noise + BBH injection | 4,000 | 500 | 500
+  Row 2: B | Noise amplitude drift | — | — | 500
+  Row 3: C | Sine-Gaussian glitches | — | — | 500
+  Row 4: D | Low SNR, 4–7 | — | — | 500
+  Row 5: E | Unseen low-mass / BNS proxy | — | — | 500
+---
+[Shape 6]:
+7,000 paired records
+---
+[Shape 7]:
+GWOSC Hanford H1 strain + ripplegw IMRPhenomD injections.
+Source: https://gwosc.org
+---
+[Shape 9]:
+1 second at 4,096 Hz
+---
+[Shape 10]:
+float32 .npy arrays: (N, 2, 4096), noisy input and clean target.
+A split: 80% / 10% / 10%.
+---
+[Shape 11]:
+Regression: classes and class imbalance are not applicable. A–E are test conditions, each with 500 test pairs.
+---
+=== SLIDE 7 ===
+[Shape 2]:
+Data preprocessing and leakage assessment
+---
+[Shape 3]:
+07 / 13
+---
+[Shape 5]:
+Valid intervals
+---
+[Shape 6]:
+Exclude NaNs; retain contiguous chunks of at least 16 seconds.
+---
+[Shape 8]:
+Filter and whiten
+---
+[Shape 9]:
+Bandpass 20–500 Hz, then whitening with 4 s FFT / 2 s overlap.
+---
+[Shape 11]:
+Segment and inject
+---
+[Shape 12]:
+Trim 2 s edges; form 4,096-point windows with 50% overlap.
+Scale injected waveforms by L2 norm and randomize time shifts.
+---
+[Shape 13]:
+Data quality audit
+---
+[Shape 14]:
+0 non-finite values
+0 exact duplicate pairs
+No feature selection:
+models learn from 1D strain.
+---
+[Shape 15]:
+Leakage risk remains
+---
+[Shape 16]:
+All splits sample a shared noise pool. Overlapping background windows can cross split boundaries.
+Next step: split by GPS interval before whitening and windowing.
+---
+[Shape 17]:
+The current implementation does not establish a leakage-free test set.
+---
+=== SLIDE 8 ===
+[Shape 2]:
+Proposed system architecture
+---
+[Shape 3]:
+08 / 13
+---
+[Shape 5]:
+GWOSC H1 strain
+HDF5 files
+---
+[Shape 8]:
+Bandpass + whitening
+1 s windows
+---
+[Shape 11]:
+IMRPhenomD injection
+Noisy / clean pairs
+---
+[Shape 14]:
+Dataset A: training and validation
+---
+[Shape 21]:
+TCN
+Nikhith
+---
+[Shape 23]:
+Transformer
+Praneeth
+---
+[Shape 25]:
+Autoencoder
+Hemavardhan
+---
+[Shape 30]:
+Reconstructed waveform
+---
+[Shape 32]:
+Reconstructed waveform
+---
+[Shape 34]:
+Reconstructed waveform
+---
+[Shape 35]:
+Independent models; common A–E evaluation using waveform overlap and MSE
+---
+[Shape 36]:
+Outputs: waveform overlays, spectrograms, benchmark metrics and an interactive Streamlit dashboard.
+---
+=== SLIDE 9 ===
+[Shape 2]:
+Deep learning models and methodology
+---
+[Shape 3]:
+09 / 13
+---
+[Table 4]:
+  Row 0:  | TCN · Nikhith | Transformer · Praneeth | DAE · Hemavardhan
+  Row 1: Architecture | 6 residual causal blocks Dilations 1–32, kernel 7 | 16-sample patches, 256 tokens 4 attention layers, 4 heads | 4-level convolutional encoder Bottleneck + skip decoder
+  Row 2: Key settings | Channels 32/64/64/ 128/128/64; dropout 0.1 | Width 128, FFN 512 Dropout 0.1 | Channels 32/64/128/256 10% masking; dropout 0.1
+  Row 3: Reason for choice | Local structure with a 757-sample receptive field | Attention across the full 1-second observation | Multiscale compression and waveform recovery
+  Row 4: Parameters | 615,905 | 941,249 | 1,656,017
+  Row 5: Recorded epochs | 50 | 35 | 35
+---
+[Shape 5]:
+Shared training setup
+---
+[Shape 6]:
+Adam   •   MSE loss   •   Learning rate 0.001   •   Batch size 32
+Weight decay 0.00001   •   Cosine annealing   •   Best validation-MSE checkpoint
+---
+[Shape 7]:
+Python, PyTorch, NumPy, GWpy / GWOSC, ripplegw / JAX, SciPy, Matplotlib and Streamlit
+---
+=== SLIDE 10 ===
+[Shape 2]:
+Results: robustness benchmarks
+---
+[Shape 3]:
+10 / 13
+---
+[Shape 5]:
+Dataset A: overlap / MSE
+---
+[Shape 6]:
+TCN
+78.09% / 0.01468
+Transformer
+84.91% / 0.01066
+Autoencoder
+85.52% / 0.00968
+---
+[Shape 7]:
+Glitches: TCN leads
+---
+[Shape 8]:
+66.72% overlap
+vs 49.82% Transformer
+---
+[Shape 9]:
+Low SNR: Transformer leads
+---
+[Shape 10]:
+51.60% overlap
+vs 35.48% TCN
+---
+[Shape 11]:
+Stationary: DAE leads
+---
+[Shape 12]:
++7.43 percentage points
+vs TCN on Dataset A
+---
+[Shape 13]:
+Overlap = cosine similarity × 100. MSE measures amplitude error. No model leads in every condition.
+---
+=== SLIDE 11 ===
+[Shape 2]:
+Results: waveforms and learning curves
+---
+[Shape 3]:
+11 / 13
+---
+[Shape 5]:
+TCN · Nikhith
+---
+[Shape 7]:
+Transformer · Praneeth
+---
+[Shape 9]:
+Autoencoder · Hemavardhan
+---
+[Shape 11]:
+Left: original single-sample comparison. Right: complete recorded training and validation MSE histories.
+---
+=== SLIDE 12 ===
+[Shape 2]:
+Results: tuning and real-event demonstration
+---
+[Shape 3]:
+12 / 13
+---
+[Shape 6]:
+16 trials, 12 epochs per trial
+---
+[Shape 7]:
+TCN: dropout 0.2 reached 72.38%
+Transformer: LR 0.002 reached 78.76%
+DAE: 5% masking reached 86.10%
+---
+[Shape 8]:
+GW150914: exploratory TCN inference
+---
+[Shape 9]:
+Offset and boundary artifacts remain.
+Validated recovery is not established.
+---
+[Shape 10]:
+Tuning values are validation overlaps. They are not directly comparable with full-training test scores.
+---
+=== SLIDE 13 ===
+[Shape 2]:
+Limitations, future scope and conclusion
+---
+[Shape 3]:
+13 / 13
+---
+[Shape 5]:
+Current limitations
+---
+[Shape 6]:
+Shared noise pool across splits; one detector and 1-second windows.
+Low-mass tests use a non-tidal waveform approximation.
+Real-event recovery and deployment latency need stronger validation.
+---
+[Shape 8]:
+Future scope
+---
+[Shape 9]:
+Split by GPS interval before preprocessing.
+Add H1 + L1, longer contexts and tidal BNS waveforms.
+Repeat seeds, quantify uncertainty and test independent events.
+---
+[Shape 10]:
+Conclusion
+---
+[Shape 11]:
+The project implements a working comparative reconstruction pipeline.
+TCN leads on glitches, Transformer on faint signals, and the autoencoder
+on stationary data in the recorded experiments.
+---
+[Shape 12]:
+Model choice depends on the signal and noise condition.
+---
+[Shape 13]:
+Evidence supports comparative results within this dataset, not a universal or deployment-ready detector.
+---

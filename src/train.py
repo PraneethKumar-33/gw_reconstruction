@@ -3,13 +3,17 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 import yaml
 import os
+import sys
 import argparse
 import json
 import numpy as np
 from tqdm import tqdm
 
+sys.path.append(os.path.join(os.path.dirname(__file__)))
+
 from data.dataset import GWDataset
 from models.tcn_baseline import TCNBaseline
+from utils import load_best_hyperparameters
 
 def compute_overlap_batch(pred, target):
     # Vectorized overlap (cosine similarity / waveform match) across batch
@@ -24,23 +28,37 @@ def compute_overlap_batch(pred, target):
 def train():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, default='configs/config.yaml')
+    parser.add_argument('--use-tuned', action='store_true', default=True, 
+                        help='Automatically load optimal hyperparameters from tuning sweep')
     args = parser.parse_args()
 
+    # Load base config
     with open(args.config, 'r') as f:
         cfg = yaml.safe_load(f)
 
+    # Automatically load optimal tuned hyperparameters
+    tuned_params = load_best_hyperparameters('tcn') if args.use_tuned else {}
+    kernel_size = tuned_params.get('kernel_size', cfg.get('tcn', {}).get('kernel_size', cfg['model']['kernel_size']))
+    dropout = tuned_params.get('dropout', cfg.get('tcn', {}).get('dropout', 0.2))
+    learning_rate = tuned_params.get('lr', cfg.get('tcn', {}).get('learning_rate', cfg['training']['learning_rate']))
+    epochs = cfg.get('tcn', {}).get('epochs', cfg['training']['epochs'])
+    batch_size = cfg.get('tcn', {}).get('batch_size', cfg['training']['batch_size'])
+    weight_decay = cfg.get('tcn', {}).get('weight_decay', cfg['training']['weight_decay'])
+
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print("=" * 65)
+    print("      TRAINING 1D TEMPORAL CONVOLUTIONAL NETWORK (TCN)")
     print(f"Device: {device} ({torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'})")
-    print(f"Epochs: {cfg['training']['epochs']} | Batch Size: {cfg['training']['batch_size']} | LR: {cfg['training']['learning_rate']}")
+    print(f"Hyperparameters: Kernel={kernel_size} | Dropout={dropout} | LR={learning_rate} (Tuned: {args.use_tuned})")
+    print(f"Epochs: {epochs} | Batch Size: {batch_size}")
     print("=" * 65)
 
-    # Build model
+    # Build model with tuned parameters
     model = TCNBaseline(
         in_channels=cfg['model']['in_channels'],
         channels=cfg['model']['channels'],
-        kernel_size=cfg['model']['kernel_size'],
-        dropout=cfg['model']['dropout']
+        kernel_size=kernel_size,
+        dropout=dropout
     ).to(device)
 
     total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -48,18 +66,18 @@ def train():
 
     optimizer = torch.optim.Adam(
         model.parameters(), 
-        lr=cfg['training']['learning_rate'],
-        weight_decay=cfg['training']['weight_decay']
+        lr=learning_rate,
+        weight_decay=weight_decay
     )
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=cfg['training']['epochs'])
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
     criterion = nn.MSELoss()
 
     # Load data
     train_dataset = GWDataset('data/datasets/dataset_A/train')
     val_dataset = GWDataset('data/datasets/dataset_A/val')
 
-    train_loader = DataLoader(train_dataset, batch_size=cfg['training']['batch_size'], shuffle=True, pin_memory=True)
-    val_loader = DataLoader(val_dataset, batch_size=cfg['training']['batch_size'], shuffle=False, pin_memory=True)
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, pin_memory=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, pin_memory=True)
 
     os.makedirs('results/checkpoints', exist_ok=True)
     os.makedirs('results/logs', exist_ok=True)
@@ -71,14 +89,14 @@ def train():
 
     print(f"\nStarting training on {len(train_dataset)} samples, validating on {len(val_dataset)} samples...\n")
     
-    for epoch in range(cfg['training']['epochs']):
+    for epoch in range(epochs):
         model.train()
         train_loss = 0.0
         train_overlaps = []
         
         pbar = tqdm(
             train_loader, 
-            desc=f"Epoch [{epoch+1:02d}/{cfg['training']['epochs']:02d}]", 
+            desc=f"Epoch [{epoch+1:02d}/{epochs:02d}]", 
             ncols=95, 
             unit="batch",
             leave=True
@@ -95,7 +113,6 @@ def train():
             
             train_loss += loss.item() * noisy.size(0)
             
-            # Batch overlap accuracy
             with torch.no_grad():
                 batch_ov = compute_overlap_batch(pred, clean)
                 train_overlaps.extend(batch_ov.cpu().tolist())

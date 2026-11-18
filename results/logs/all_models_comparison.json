@@ -1,0 +1,95 @@
+{
+    "1D CNN / TCN Baseline": {
+        "parameters": 615905,
+        "datasets": {
+            "Dataset A (Stationary BBH)": {
+                "overlap_percent": 77.68412061035633,
+                "std_overlap": 18.887094191497162,
+                "mse": 0.015050246321596206
+            },
+            "Dataset B (Non-Stationary)": {
+                "overlap_percent": 66.62708157971501,
+                "std_overlap": 20.09741337128607,
+                "mse": 0.03227500567026436
+            },
+            "Dataset C (Glitches)": {
+                "overlap_percent": 68.19775345176458,
+                "std_overlap": 19.6382230879186,
+                "mse": 0.04021003650687635
+            },
+            "Dataset D (Low SNR / Whispers)": {
+                "overlap_percent": 35.42537211291492,
+                "std_overlap": 15.397464073401421,
+                "mse": 0.007538454284891486
+            },
+            "Dataset E (Binary Neutron Stars)": {
+                "overlap_percent": 42.70023828148842,
+                "std_overlap": 20.27908750613425,
+                "mse": 0.044029752371250654
+            }
+        },
+        "latency_ms": 10.584975000238046
+    },
+    "Transformer Reconstructor": {
+        "parameters": 941249,
+        "datasets": {
+            "Dataset A (Stationary BBH)": {
+                "overlap_percent": 81.08209466934204,
+                "std_overlap": 16.65879881702447,
+                "mse": 0.013401490432210266
+            },
+            "Dataset B (Non-Stationary)": {
+                "overlap_percent": 52.48382829651237,
+                "std_overlap": 24.18778328447094,
+                "mse": 0.05699515329673886
+            },
+            "Dataset C (Glitches)": {
+                "overlap_percent": 32.21770541039295,
+                "std_overlap": 23.696427560981874,
+                "mse": 0.06686701116338373
+            },
+            "Dataset D (Low SNR / Whispers)": {
+                "overlap_percent": 45.90005900021642,
+                "std_overlap": 16.720391389701327,
+                "mse": 0.006057161108125001
+            },
+            "Dataset E (Binary Neutron Stars)": {
+                "overlap_percent": 52.21147815883159,
+                "std_overlap": 24.249696591803698,
+                "mse": 0.03577559520820432
+            }
+        },
+        "latency_ms": 3.432700000121258
+    },
+    "Source-Agnostic DAE": {
+        "parameters": 1656017,
+        "datasets": {
+            "Dataset A (Stationary BBH)": {
+                "overlap_percent": 83.3512823536992,
+                "std_overlap": 17.63858407005195,
+                "mse": 0.011109316952526569
+            },
+            "Dataset B (Non-Stationary)": {
+                "overlap_percent": 64.72528856089339,
+                "std_overlap": 27.58047365852318,
+                "mse": 0.04247173062432558
+            },
+            "Dataset C (Glitches)": {
+                "overlap_percent": 49.49305847878568,
+                "std_overlap": 28.695936421841918,
+                "mse": 0.06141910513862967
+            },
+            "Dataset D (Low SNR / Whispers)": {
+                "overlap_percent": 41.405821442604065,
+                "std_overlap": 17.562843034896282,
+                "mse": 0.009147249134257436
+            },
+            "Dataset E (Binary Neutron Stars)": {
+                "overlap_percent": 50.12950328886509,
+                "std_overlap": 23.60672265311724,
+                "mse": 0.03827720777201466
+            }
+        },
+        "latency_ms": 2.5879100000020117
+    }
+}
